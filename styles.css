@@ -1,0 +1,127 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 0;
+  padding: 0;
+  background-color: #fffbfc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilos para el título */
+h1 {
+  font-size: 100px;
+  color: #233947;
+  margin-bottom: 30px;
+}
+
+/* RECTÁNGULOS */
+/* Contenedor de los rectángulos */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;                    /* Espacio entre los rectángulos */
+  margin-bottom: 10px;          /* Espacio debajo de los rectángulos */
+}
+
+/* Estilos para los rectángulos */
+.rectangle, .rectangle-bordered, textarea {
+  width: 250px;                 /* Tamaño uniforme */
+  height: 60px;                 /* Tamaño uniforme */
+  border-radius: 40px;          /* Bordes redondeados */
+  font-size: 24px;              /* Tamaño de la fuente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;                   /* Elimina el padding */
+  margin: 0;                    /* Elimina el margen */
+  text-align: center;           /* Centra el texto */
+  resize: none;                 /* Elimina la posibilidad de redimensionar el textarea */
+}
+.rectangle {
+  background-color: #233947;
+  color: #fffbfc;
+  border: 3px solid #233947;    /* Borde igual al de los rectángulos */
+}
+.rectangle-bordered {
+  background-color: #fffbfc;
+  color: #233947;
+  border: 3px solid #233947;    /* Borde igual al de los rectángulos */
+}
+.centered-textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;               /* Aumenta el ancho al 100% del contenedor */
+  height: 150px;             /* Ajusta la altura a 150px o lo que prefieras */
+  font-size: 30px;           /* Aumenta el tamaño de la fuente */
+  padding: 10px;             /* Da un poco de espacio interno */
+  text-align: center;        /* Centra el texto dentro */
+  border-radius: 10px;       /* Bordes redondeados */
+  border: 3px solid #233947; /* Borde similar a los rectángulos */
+  background-color: #fffbfc; /* Fondo claro */
+  color: #233947;            /* Color del texto oscuro */
+}
+
+
+/* Estilo para pantallas pequeñas (por ejemplo, móviles) */
+@media screen and (max-width: 768px) {
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;                    /* Espacio entre los rectángulos */
+  margin-bottom: 10px;          /* Espacio debajo de los rectángulos */
+}
+
+/* Estilos para los rectángulos */
+.rectangle, .rectangle-bordered, textarea {
+  width: 200px;                 /* Tamaño uniforme */
+  height: 30px;
+  width: 50%;
+  border-radius: 40px;          /* Bordes redondeados */
+  font-size: 12px;              /* Tamaño de la fuente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;                   /* Elimina el padding */
+  margin: 0;                    /* Elimina el margen */
+  text-align: center;           /* Centra el texto */
+  resize: none;                 /* Elimina la posibilidad de redimensionar el textarea */
+}
+ .centered-textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;               /* Aumenta el ancho al 100% del contenedor */
+  height: 150px;             /* Ajusta la altura a 150px o lo que prefieras */
+  font-size: 30px;           /* Aumenta el tamaño de la fuente */
+  padding: 10px;             /* Da un poco de espacio interno */
+  text-align: center;        /* Centra el texto dentro */
+  border-radius: 10px;       /* Bordes redondeados */
+  border: 3px solid #233947; /* Borde similar a los rectángulos */
+  background-color: #fffbfc; /* Fondo claro */
+  color: #233947;            /* Color del texto oscuro */
+}
+}
+
+
+/* Copiar*/
+.copy-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #233947;
+  border-radius: 50%;
+  color: #fffbfc;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.copy-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+
