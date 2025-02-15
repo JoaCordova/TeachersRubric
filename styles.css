@@ -1,0 +1,274 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* Mantiene otros elementos centrados */
+  height: 100vh;
+  overflow: hidden;  
+  background: linear-gradient(to right, #fffbfc 60%, rgba(255, 255, 255, 0)), 
+      url('assets/bg/light_bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.moon {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+dotlottie-player {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+h1 {
+  font-size: 100px;
+  color: #233947;
+  margin-bottom: 30px;
+}
+
+/* Contenedor general para los rectángulos y notas */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 columnas */
+  gap: 40px;                              /* Aumentar el espacio entre los elementos */
+  margin-bottom: 20px;                     /* Espacio inferior */
+  justify-items: center;                  /* Centra los elementos horizontalmente */
+  align-items: flex-start;                /* Alineación al inicio para las celdas */
+}
+
+/* Cada item dentro de la cuadrícula (Título + Textarea) */
+.item {
+  display: flex;
+  flex-direction: column;                 /* Organiza el título y el textarea en una columna */
+  align-items: center;                    /* Centra los elementos en la columna */
+  width: 100%;                            /* Hace que los items ocupen el 100% del espacio disponible */
+  max-width: 250px;                       /* Limita el tamaño máximo */
+}
+
+/* Estilo de los rectángulos (títulos) */
+.rectangle {
+  font-size: 24px;                        /* Tamaño de fuente para los títulos */
+  font-weight: bold;
+  text-align: center;                     /* Centra el texto dentro del recuadro */
+  padding: 10px;
+  background-color: #233947;              /* Color de fondo para los títulos */
+  color: #fffbfc;                         /* Color de texto claro */
+  border-radius: 40px;                    /* Bordes redondeados */
+  width: 100%;                            /* Ancho flexible dentro de la celda */
+  height: 60px;                           /* Altura fija para los títulos */
+  box-sizing: border-box;                 /* Asegura que el padding no afecte el tamaño */
+  white-space: nowrap;                    /* Evita que el texto se rompa */
+  margin-bottom: 15px;                    /* Espacio debajo del título */
+}
+
+/* Estilo para los textarea de la fila inferior */
+.textarea {
+  width: 100%;                            /* Ancho flexible dentro de la celda */
+  height: 60px;                           /* Altura fija para coincidir con los rectángulos de arriba */
+  border-radius: 40px;                     /* Bordes redondeados */
+  font-size: 34px;                         /* Tamaño de fuente */
+  padding: 10px;
+  color: #233947;
+  background-color: rgba(255, 251, 252, 0.5);
+  text-align: center;
+  border: 3px solid #233947;
+  box-sizing: border-box;                  /* Asegura que el padding no afecte el tamaño */
+overflow: hidden;                           /* Evita el cambio de tamaño */
+  white-space: nowrap;                    /* Evita que el texto se rompa */
+}
+
+.textarea::after {
+  content: '';  /* No mostramos ningún contenido */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;  /* Tamaño del área donde normalmente aparecen las líneas */
+  height: 20px;
+  background-color: transparent;  /* Haz el fondo transparente para que no interfiera visualmente */
+  pointer-events: none;  /* Evita que interfiera con la capacidad de redimensionar */
+}
+
+/* Estilo del área de texto central (el último) */
+.centered-textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 90%;
+  height: 150px;
+  font-size: 40px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid #233947;
+  background-color: rgba(255, 251, 252, 0.5);
+  color: #233947;
+}
+
+
+
+/*COPIAR*/
+.copy-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #233947;
+  border-radius: 50%;
+  color: #fffbfc;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+  position: relative; /
+}
+.copy-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* 
+       /$$                     /$$                                           /$$          
+      | $$                    | $$                                          | $$          
+  /$$$$$$$  /$$$$$$   /$$$$$$ | $$   /$$       /$$$$$$/$$$$   /$$$$$$   /$$$$$$$  /$$$$$$ 
+ /$$__  $$ |____  $$ /$$__  $$| $$  /$$/      | $$_  $$_  $$ /$$__  $$ /$$__  $$ /$$__  $$
+| $$  | $$  /$$$$$$$| $$  \__/| $$$$$$/       | $$ \ $$ \ $$| $$  \ $$| $$  | $$| $$$$$$$$
+| $$  | $$ /$$__  $$| $$      | $$_  $$       | $$ | $$ | $$| $$  | $$| $$  | $$| $$_____/
+|  $$$$$$$|  $$$$$$$| $$      | $$ \  $$      | $$ | $$ | $$|  $$$$$$/|  $$$$$$$|  $$$$$$$
+ \_______/ \_______/|__/      |__/  \__/      |__/ |__/ |__/ \______/  \_______/ \_______/
+                                                                                          
+*/
+
+body.darkmode {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* Mantiene otros elementos centrados */
+  height: 100vh;
+  overflow: hidden;  
+  background: linear-gradient(to right, #282A37 60%, rgba(255, 255, 255, 0)), 
+      url('assets/bg/dark_bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+body.darkmode button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+body.darkmode .button-container {
+  width: 100%; 
+  display: flex;
+  justify-content: flex-start; 
+  padding: 20px;
+}
+body.darkmode h1 {
+  font-size: 100px;
+  color: #FBFBFF;
+  margin-bottom: 30px;
+}
+
+/* Contenedor general para los rectángulos y notas */
+body.darkmode .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 columnas */
+  gap: 40px;                              /* Aumentar el espacio entre los elementos */
+  margin-bottom: 20px;                     /* Espacio inferior */
+  justify-items: center;                  /* Centra los elementos horizontalmente */
+  align-items: flex-start;                /* Alineación al inicio para las celdas */
+}
+
+/* Cada item dentro de la cuadrícula (Título + Textarea) */
+body.darkmode .item {
+  display: flex;
+  flex-direction: column;                 /* Organiza el título y el textarea en una columna */
+  align-items: center;                    /* Centra los elementos en la columna */
+  width: 100%;                            /* Hace que los items ocupen el 100% del espacio disponible */
+  max-width: 250px;                       /* Limita el tamaño máximo */
+}
+
+/* Estilo de los rectángulos (títulos) */
+body.darkmode .rectangle {
+  font-size: 24px;                        /* Tamaño de fuente para los títulos */
+  font-weight: bold;
+  text-align: center;                     /* Centra el texto dentro del recuadro */
+  padding: 10px;
+  background-color: #1e90f3;              /* Color de fondo para los títulos */
+  color: white;                         /* Color de texto claro */
+  border-radius: 40px;                    /* Bordes redondeados */
+  width: 100%;                            /* Ancho flexible dentro de la celda */
+  height: 60px;                           /* Altura fija para los títulos */
+  box-sizing: border-box;                 /* Asegura que el padding no afecte el tamaño */
+  white-space: nowrap;                    /* Evita que el texto se rompa */
+  margin-bottom: 15px;                    /* Espacio debajo del título */
+}
+
+/* Estilo para los textarea de la fila inferior */
+body.darkmode .textarea {
+  width: 100%;                            /* Ancho flexible dentro de la celda */
+  height: 60px;                           /* Altura fija para coincidir con los rectángulos de arriba */
+  border-radius: 40px;                     /* Bordes redondeados */
+  font-size: 34px;                         /* Tamaño de fuente */
+  padding: 10px;
+  color: white;
+  background-color: rgba(255, 251, 252, 0.5);
+  text-align: center;
+  border: 3px solid #233947;
+  box-sizing: border-box;                  /* Asegura que el padding no afecte el tamaño */
+overflow: hidden;                           /* Evita el cambio de tamaño */
+  white-space: nowrap;                    /* Evita que el texto se rompa */
+}
+
+body.darkmode  .textarea::after {
+  content: '';  /* No mostramos ningún contenido */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;  /* Tamaño del área donde normalmente aparecen las líneas */
+  height: 20px;
+  background-color: transparent;  /* Haz el fondo transparente para que no interfiera visualmente */
+  pointer-events: none;  /* Evita que interfiera con la capacidad de redimensionar */
+}
+
+/* Estilo del área de texto central (el último) */
+body.darkmode .centered-textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 90%;
+  height: 150px;
+  font-size: 40px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid #233947;
+  background-color: rgba(255, 251, 252, 0.5);
+  color: #233947;
+}
+
+/*COPIAR*/
+body.darkmode .copy-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #1E90F3;
+  border-radius: 50%;
+  color: #FBFBFF;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+  position: relative; /
+}
+.copy-icon img {
+  width: 32px;
+  height: 32px;
+}

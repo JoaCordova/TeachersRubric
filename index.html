@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rúbrica</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+  <div class="moon">
+    <dotlottie-player 
+        src="https://lottie.host/c6f3e473-467c-4bce-b06c-bc5f4adb7780/PCKlutZ104.lottie" 
+        background="transparent" 
+        speed="1" 
+        style="width: 50px; height: 50px;" 
+        loop 
+        autoplay 
+        onclick="darkmode()">
+    </dotlottie-player>
+  </div>
+
+  <h1>Rúbrica</h1> 
+
+  <div class="container">
+    <div class="item">
+      <div class="rectangle">Ortografía</div>
+      <textarea id="rectangle1" class="textarea" disabled>0</textarea> 
+    </div>
+
+    <div class="item">
+      <div class="rectangle">Redacción</div>
+      <textarea id="rectangle2" class="textarea" disabled>0</textarea>
+    </div>
+
+    <div class="item">
+      <div class="rectangle">Contenido</div>
+      <textarea id="rectangle3" class="textarea" disabled>0</textarea> 
+    </div>
+
+    <div class="item">
+      <div class="rectangle">Presentación</div>
+      <textarea id="rectangle4" class="textarea" disabled>0</textarea> 
+    </div>
+  </div>
+
+  <textarea class="centered-textarea" placeholder="Escribe aquí..." readonly></textarea>
+
+  <!-- Copy -->
+  <div class="copy-icon">
+    <img src="assets/copy-icon.svg" alt="Copiar" />
+  </div>
+
+  <!-- Scripts -->
+  <!-- Primero cargar Lottie.js -->
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.9.4/build/player/lottie.min.js"></script>
+  
+  <!-- Luego cargar tu archivo lottie.js -->
+  <script src="darkmode.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
