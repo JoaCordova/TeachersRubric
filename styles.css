@@ -13,19 +13,13 @@ body {
       url('assets/bg/light_bg.jpg') no-repeat center center;
   background-size: cover;
 }
-
-.moon {
-    display: flex;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+#animation-container {
+  width: 50px; /* Ajusta el tamaño pequeño */
+  height: 50px;
+  position: absolute; /* Posiciona absolutamente el ícono */
+  left: 10px; /* Desplaza hacia la izquierda */
+  top: 10px;  /* Desplaza hacia la parte superior */
 }
-
-dotlottie-player {
-    width: 50px;
-    height: 50px;
-}
-
-
-
 h1 {
   font-size: 100px;
   color: #233947;
@@ -67,7 +61,6 @@ h1 {
   margin-bottom: 15px;                    /* Espacio debajo del título */
 }
 
-/* Estilo para los textarea de la fila inferior */
 .textarea {
   width: 100%;                            /* Ancho flexible dentro de la celda */
   height: 60px;                           /* Altura fija para coincidir con los rectángulos de arriba */
@@ -90,8 +83,8 @@ overflow: hidden;                           /* Evita el cambio de tamaño */
   right: 0;
   width: 20px;  /* Tamaño del área donde normalmente aparecen las líneas */
   height: 20px;
-  background-color: transparent;  /* Haz el fondo transparente para que no interfiera visualmente */
-  pointer-events: none;  /* Evita que interfiera con la capacidad de redimensionar */
+  background-color: transparent;  
+  pointer-events: none;  
 }
 
 /* Estilo del área de texto central (el último) */
@@ -107,8 +100,6 @@ overflow: hidden;                           /* Evita el cambio de tamaño */
   background-color: rgba(255, 251, 252, 0.5);
   color: #233947;
 }
-
-
 
 /*COPIAR*/
 .copy-icon {
@@ -129,18 +120,64 @@ overflow: hidden;                           /* Evita el cambio de tamaño */
   width: 32px;
   height: 32px;
 }
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(35, 57, 71, 0.9);  
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.notification.show {
+  opacity: 1;
+}
+/*info*/
+.message-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(35, 57, 71, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: none; /* Oculto por defecto */
+}
 
-/* 
-       /$$                     /$$                                           /$$          
-      | $$                    | $$                                          | $$          
-  /$$$$$$$  /$$$$$$   /$$$$$$ | $$   /$$       /$$$$$$/$$$$   /$$$$$$   /$$$$$$$  /$$$$$$ 
- /$$__  $$ |____  $$ /$$__  $$| $$  /$$/      | $$_  $$_  $$ /$$__  $$ /$$__  $$ /$$__  $$
-| $$  | $$  /$$$$$$$| $$  \__/| $$$$$$/       | $$ \ $$ \ $$| $$  \ $$| $$  | $$| $$$$$$$$
-| $$  | $$ /$$__  $$| $$      | $$_  $$       | $$ | $$ | $$| $$  | $$| $$  | $$| $$_____/
-|  $$$$$$$|  $$$$$$$| $$      | $$ \  $$      | $$ | $$ | $$|  $$$$$$/|  $$$$$$$|  $$$$$$$
- \_______/ \_______/|__/      |__/  \__/      |__/ |__/ |__/ \______/  \_______/ \_______/
-                                                                                          
-*/
+.message {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.info-icon img {
+  content: url('assets/icons/info.png');
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+/* Estilo de la notificación cuando se muestra */
+.custom-notification.show {
+  opacity: 1;
+}
+
+/* DARK MODE */
 
 body.darkmode {
   font-family: 'Montserrat', sans-serif;
@@ -150,7 +187,7 @@ body.darkmode {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; /* Mantiene otros elementos centrados */
+  align-items: center; 
   height: 100vh;
   overflow: hidden;  
   background: linear-gradient(to right, #282A37 60%, rgba(255, 255, 255, 0)), 
@@ -220,9 +257,9 @@ body.darkmode .textarea {
   font-size: 34px;                         /* Tamaño de fuente */
   padding: 10px;
   color: white;
-  background-color: rgba(255, 251, 252, 0.5);
+  background-color: rgba(49, 55, 70, 0.5);
   text-align: center;
-  border: 3px solid #233947;
+  border: 3px solid #1E90F3;
   box-sizing: border-box;                  /* Asegura que el padding no afecte el tamaño */
 overflow: hidden;                           /* Evita el cambio de tamaño */
   white-space: nowrap;                    /* Evita que el texto se rompa */
@@ -248,9 +285,11 @@ body.darkmode .centered-textarea {
   padding: 10px;
   text-align: center;
   border-radius: 10px;
-  border: 3px solid #233947;
-  background-color: rgba(255, 251, 252, 0.5);
-  color: #233947;
+  border: 3px solid #18A6F5;
+  background-color: rgba(49, 55, 70, 0.5);
+  color: #FBFBFF;
+  box-shadow:
+      0 0 7px 1px #18A6F5;
 }
 
 /*COPIAR*/
@@ -272,3 +311,19 @@ body.darkmode .copy-icon {
   width: 32px;
   height: 32px;
 }
+body.darkmode .info-icon img {
+  content: url('assets/icons/info_dark.png');
+}
+body.darkmode .message-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(30, 144, 243, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: none; /* Oculto por defecto */
+}
+

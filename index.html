@@ -5,46 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rúbrica</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/icons/ico.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-   
-<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <div id="animation-container" onclick="darkmode()"></div>
 
-  <div class="moon">
-    <dotlottie-player 
-        src="https://lottie.host/c6f3e473-467c-4bce-b06c-bc5f4adb7780/PCKlutZ104.lottie" 
-        background="transparent" 
-        speed="1" 
-        style="width: 50px; height: 50px;" 
-        loop 
-        autoplay 
-        onclick="darkmode()">
-    </dotlottie-player>
-  </div>
-
-  <h1>Rúbrica</h1> 
+  <h1>Rúbrica</h1>
 
   <div class="container">
     <div class="item">
       <div class="rectangle">Ortografía</div>
-      <textarea id="rectangle1" class="textarea" disabled>0</textarea> 
+      <textarea id="rectangle1" class="textarea" readonly>0</textarea>
     </div>
 
     <div class="item">
       <div class="rectangle">Redacción</div>
-      <textarea id="rectangle2" class="textarea" disabled>0</textarea>
+      <textarea id="rectangle2" class="textarea" readonly>0</textarea>
     </div>
 
     <div class="item">
       <div class="rectangle">Contenido</div>
-      <textarea id="rectangle3" class="textarea" disabled>0</textarea> 
+      <textarea id="rectangle3" class="textarea" readonly>0</textarea>
     </div>
 
     <div class="item">
       <div class="rectangle">Presentación</div>
-      <textarea id="rectangle4" class="textarea" disabled>0</textarea> 
+      <textarea id="rectangle4" class="textarea" readonly>0</textarea>
     </div>
   </div>
 
@@ -52,17 +41,39 @@
 
   <!-- Copy -->
   <div class="copy-icon">
-    <img src="assets/copy-icon.svg" alt="Copiar" />
+    <img src="assets/icons/copy-icon.svg" alt="Copiar" />
   </div>
 
-  <!-- Scripts -->
-  <!-- Primero cargar Lottie.js -->
-  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.9.4/build/player/lottie.min.js"></script>
-  
-  <!-- Luego cargar tu archivo lottie.js -->
-  <script src="darkmode.js"></script>
+  <div id="notification" class="notification" style="display: none;">
+    Texto copiado al portapapeles.
+  </div>
 
-  <script src="script.js"></script>
+ <!--info-->
+<div class="info-icon">
+  <img src="assets/icons/info.png" alt="Información" style="width: 40px; height: 40px;" />
+</div>
+
+<!-- Contenedor de los mensajes (inicialmente oculto) -->
+<div class="message-container">
+  <span class="message">Q, W, E, R = Sumar notas</span>
+  <span class="message">A, S, D, F = Restar notas</span>
+  <span class="message">X = Recargar página</span>
+  <span class="message">C = Copiar</span>
+
+  <!-- Botón de cierre con PNG -->
+  <button class="close-button">
+    <img src="/assets/icons/cross.png" alt="Cerrar" style="width: 20px; height: 20px;" />
+  </button>
+</div>
+
+
+  <!-- Scripts -->
+  <script src="scripts/darkmode.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/AdjustTextSize.js"></script>
+  <script src="scripts/info.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.9.4/build/player/lottie.min.js"></script>
 
 </body>
 </html>
