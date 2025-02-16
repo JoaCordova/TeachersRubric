@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <h1>Rúbrica</h1>
 
 <p>
@@ -11,6 +11,3 @@ Photo by Tirachard Kumtanom: https://www.pexels.com/photo/woman-writing-on-a-not
 Los íconos son de  Flaticon.</a>
 
 </p>
-=======
-Proyecto de rúbrica, donde uso atajos de trecaldo en JavaScript.
->>>>>>> f895ea8367c21a231a8ba85d93716835ef83506a
