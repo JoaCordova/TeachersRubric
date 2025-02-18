@@ -2,6 +2,7 @@
 <h1>Rúbrica</h1>
 
 <p>
+![2025-02-1722-08-35-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e6897711-3597-4ca4-a202-b859063ad060)
 
 Recursos:
 Photo by Ayşe İpek: https://www.pexels.com/photo/lamp-shade-between-black-armchairs-13278838/ 
