@@ -8,11 +8,12 @@ body {
   justify-content: flex-start;
   align-items: center; /* Mantiene otros elementos centrados */
   height: 100vh;
-  overflow: hidden;  
+  overflow: hidden;
   background: linear-gradient(to right, #fffbfc 60%, rgba(255, 255, 255, 0)), 
       url('assets/bg/light_bg.jpg') no-repeat center center;
   background-size: cover;
 }
+
 #animation-container {
   width: 50px; /* Ajusta el tamaño pequeño */
   height: 50px;
@@ -20,6 +21,7 @@ body {
   left: 10px; /* Desplaza hacia la izquierda */
   top: 10px;  /* Desplaza hacia la parte superior */
 }
+
 h1 {
   font-size: 100px;
   color: #233947;
@@ -72,7 +74,7 @@ h1 {
   text-align: center;
   border: 3px solid #233947;
   box-sizing: border-box;                  /* Asegura que el padding no afecte el tamaño */
-overflow: hidden;                           /* Evita el cambio de tamaño */
+  overflow: hidden;                           /* Evita el cambio de tamaño */
   white-space: nowrap;                    /* Evita que el texto se rompa */
 }
 
@@ -114,12 +116,13 @@ overflow: hidden;                           /* Evita el cambio de tamaño */
   font-size: 30px;
   cursor: pointer;
   margin-top: 30px;
-  position: relative; /
+  position: relative;
 }
 .copy-icon img {
   width: 32px;
   height: 32px;
 }
+
 .notification {
   position: fixed;
   bottom: 20px;
@@ -133,9 +136,11 @@ overflow: hidden;                           /* Evita el cambio de tamaño */
   opacity: 0;
   transition: opacity 0.5s;
 }
+
 .notification.show {
   opacity: 1;
 }
+
 /*info*/
 .message-container {
   position: absolute;
@@ -189,7 +194,7 @@ body.darkmode {
   justify-content: flex-start;
   align-items: center; 
   height: 100vh;
-  overflow: hidden;  
+  overflow: hidden;
   background: linear-gradient(to right, #282A37 60%, rgba(255, 255, 255, 0)), 
       url('assets/bg/dark_bg.jpg') no-repeat center center;
   background-size: cover;
@@ -208,6 +213,7 @@ body.darkmode .button-container {
   justify-content: flex-start; 
   padding: 20px;
 }
+
 body.darkmode h1 {
   font-size: 100px;
   color: #FBFBFF;
@@ -261,11 +267,11 @@ body.darkmode .textarea {
   text-align: center;
   border: 3px solid #1E90F3;
   box-sizing: border-box;                  /* Asegura que el padding no afecte el tamaño */
-overflow: hidden;                           /* Evita el cambio de tamaño */
+  overflow: hidden;                           /* Evita el cambio de tamaño */
   white-space: nowrap;                    /* Evita que el texto se rompa */
 }
 
-body.darkmode  .textarea::after {
+body.darkmode .textarea::after {
   content: '';  /* No mostramos ningún contenido */
   position: absolute;
   bottom: 0;
@@ -305,15 +311,18 @@ body.darkmode .copy-icon {
   font-size: 30px;
   cursor: pointer;
   margin-top: 30px;
-  position: relative; /
+  position: relative;
 }
+
 .copy-icon img {
   width: 32px;
   height: 32px;
 }
+
 body.darkmode .info-icon img {
   content: url('assets/icons/info_dark.png');
 }
+
 body.darkmode .message-container {
   position: absolute;
   bottom: 20px;
@@ -326,3 +335,22 @@ body.darkmode .message-container {
   font-size: 14px;
   display: none; /* Oculto por defecto */
 }
+
+.github-link {
+  margin-top: 20px;
+  margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
+}
+
+.github-link a {
+  text-decoration: none;
+}
+
+.github-icon {
+  width: 70px; /* Tamaño del icono */
+  height: auto;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
