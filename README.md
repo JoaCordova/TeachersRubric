@@ -1,13 +1,14 @@
-
 <h1>Rúbrica</h1>
 
-<p>
+<!-- Aquí se debe usar la etiqueta <img> para insertar la imagen -->
+<img src="https://github.com/user-attachments/assets/6337149c-cc10-4f9c-ac44-7dcbd3c87997" alt="Descripción de la imagen" />
+<p>Programa de rúbrica con atajos de teclado</p>
+<p>Recursos:</p>
+<ul>
+  <li><a href="https://www.pexels.com/photo/lamp-shade-between-black-armchairs-13278838/">Photo by Ayşe İpek</a></li>
+  <li><a href="https://www.pexels.com/photo/woman-writing-on-a-notebook-beside-teacup-and-tablet-computer-733856/">Photo by Tirachard Kumtanom</a></li>
+  <li>Los íconos son de <a href="https://www.flaticon.com/">Flaticon</a>.</li>
+</ul>
 
-Recursos:
-Photo by Ayşe İpek: https://www.pexels.com/photo/lamp-shade-between-black-armchairs-13278838/ 
 
-Photo by Tirachard Kumtanom: https://www.pexels.com/photo/woman-writing-on-a-notebook-beside-teacup-and-tablet-computer-733856/
 
-Los íconos son de  Flaticon.</a>
-
-</p>
