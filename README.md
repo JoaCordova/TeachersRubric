@@ -10,5 +10,26 @@
   <li>Los íconos son de <a href="https://www.flaticon.com/">Flaticon</a>.</li>
 </ul>
 
-
+## Directory structure
+```
+Directory structure:
+└── joacordova-r-brica/
+    ├── README.md
+    ├── LICENSE
+    ├── index.html
+    ├── script.js
+    ├── styles.css
+    ├── assets/
+    │   ├── bg/
+    │   ├── icons/
+    │   ├── lottie/
+    │   │   ├── moon.json
+    │   │   └── sun.json
+    │   └── sounds/
+    └── scripts/
+        ├── AdjustTextSize.js
+        ├── darkmode.js
+        ├── info.js
+        └── script.js
+```
 
